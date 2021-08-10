@@ -2,11 +2,15 @@
   "name": "server-manager-api",
   "version": "1.0.0",
   "description": "API for Server Manager",
-  "main": "index.ts",
-
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "/build"
+  ],
     "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm run build",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
