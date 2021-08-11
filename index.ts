@@ -5,10 +5,11 @@ import { Application } from "express";
     [key:string]: string | number |boolean; 
     PARSE_DATABASEURI: string = "mongodb://mongo:27017/";
     PARSE_MASTERKEY: string = "ABCDEFG";
-    PARSE_SERVERURL: string = "http://localhost:13371";
-    PARSE_PUBLICSERVERURL: string = "http://127.0.0.1:13371";
-    PORT: number = 1337;
-    LOCALPORT: number = 13371;
+    PARSE_LOCAL_SERVERHOST: string = "localhost";
+    PARSE_PUBLIC_SERVERHOST: string = "localhost";
+    HTTPS_PORT: number = 1337;
+    HTTP_PORT: number = 13371;
+    HTTPS: boolean;
     MAIN_DATABASE: string = "servermanager";
   }
   
@@ -18,9 +19,10 @@ export class SubServerConfig {
   PARSE_DATABASEURI: string;
   PARSE_APPID: string;
   PARSE_MASTERKEY: string;
-  PARSE_SERVERHOST: string;
+  PARSE_LOCAL_SERVERHOST: string = "localhost";
+  PARSE_PUBLIC_SERVERHOST: string = "localhost";
   CLOUD_ENTRY: string;
-  PATH: string
+  PATH: string;
   HTTPS_PORT: number;
   HTTP_PORT: number;
   HTTPS: boolean;
