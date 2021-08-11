@@ -50,6 +50,7 @@ import { Schema } from "./schema";
     }
 
     export async function ProcessInit() {
+        Parse.Object.registerSubclass("Process", Process);
         await Schema.initObject<Process>([
             { name: "Name", type: "String" },
             { name: "CurrentStep", type: "Number" },
