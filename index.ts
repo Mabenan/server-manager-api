@@ -3,16 +3,13 @@ import { Application } from "express";
 
   export class ServerConfig {
     [key:string]: string | number |boolean; 
-    PARSE_APPNAME: string;
-    PARSE_DATABASEURI: string;
-    PARSE_APPID: string;
-    PARSE_MASTERKEY: string;
-    PARSE_SERVERURL: string;
-    PARSE_PUBLICSERVERURL: string;
-    ROUTE: string;
-    PORT: number;
-    LOCALPORT: number;
-    MAIN_DATABASE: string;
+    PARSE_DATABASEURI: string = "mongodb://mongo:27017/";
+    PARSE_MASTERKEY: string = "ABCDEFG";
+    PARSE_SERVERURL: string = "http://localhost:13371";
+    PARSE_PUBLICSERVERURL: string = "http://127.0.0.1:13371";
+    PORT: number = 1337;
+    LOCALPORT: number = 13371;
+    MAIN_DATABASE: string = "servermanager";
   }
   
 export class SubServerConfig {
