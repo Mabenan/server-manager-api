@@ -13,6 +13,22 @@ import { Application } from "express";
     LOCALPORT: number;
     MAIN_DATABASE: string;
   }
+  
+export class SubServerConfig {
+  PARSE_APPNAME: string;
+  PARSE_DATABASEURI: string;
+  PARSE_APPID: string;
+  PARSE_MASTERKEY: string;
+  PARSE_SERVERHOST: string;
+  PARSE_PUBLICSERVERURL: string;
+  CLOUD_ENTRY: string;
+  PATH: string
+  HTTPS_PORT: number;
+  HTTP_PORT: number;
+  HTTPS: boolean;
+  INIT_MODULE: string;
+}
+
 
   class Instance {
     PARSE_INSTANCE: Application;
