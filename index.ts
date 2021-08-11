@@ -24,6 +24,6 @@ import { Application } from "express";
   }
 
   export const instance = new Instance();
-export { Process } from "./Process";
+export { Process, ProcessInit } from "./Process";
 export { Cloud } from "./cloud";
 export { Schema } from "./schema";
