@@ -19,7 +19,6 @@ export class SubServerConfig {
   PARSE_APPID: string;
   PARSE_MASTERKEY: string;
   PARSE_SERVERHOST: string;
-  PARSE_PUBLICSERVERURL: string;
   CLOUD_ENTRY: string;
   PATH: string
   HTTPS_PORT: number;
