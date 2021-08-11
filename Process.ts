@@ -1,3 +1,5 @@
+import { Schema } from "./schema";
+
     export class Process extends Parse.Object {
 
         public get Name(): string {
@@ -48,5 +50,18 @@
     }
 
     export async function ProcessInit() {
-
+        await Schema.initObject<Process>([
+            { name: "Name", type: "String" },
+            { name: "CurrentStep", type: "Number" },
+            { name: "Running", type: "Boolean" },
+            { name: "Progress", type: "Number" }
+        ], Process, {
+            find: { requiresAuthentication: undefined, 'role:Admin': true },
+            get: {  requiresAuthentication: undefined, 'role:Admin': true },
+            count: {  requiresAuthentication: undefined, 'role:Admin': true },
+            create: {  requiresAuthentication: undefined, 'role:Admin': true },
+            update: {  requiresAuthentication: undefined, 'role:Admin': true },
+            delete: {  requiresAuthentication: undefined, 'role:Admin': true },
+            addField: {  requiresAuthentication: undefined, 'role:Admin': true }
+        });
     }
