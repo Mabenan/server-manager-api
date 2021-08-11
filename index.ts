@@ -2,6 +2,7 @@ import { Application } from "express";
 
 
   export class ServerConfig {
+    [key:string]: string | number |boolean; 
     PARSE_APPNAME: string;
     PARSE_DATABASEURI: string;
     PARSE_APPID: string;
@@ -15,6 +16,7 @@ import { Application } from "express";
   }
   
 export class SubServerConfig {
+  [key:string]: string | number |boolean;
   PARSE_APPNAME: string;
   PARSE_DATABASEURI: string;
   PARSE_APPID: string;
