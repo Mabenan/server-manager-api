@@ -40,6 +40,10 @@ export class SubServerConfig {
   }
 
   export const instance = new Instance();
+
+  export interface InitProcess {
+    init() : any;
+  }
 export { Process, ProcessInit } from "./Process";
 export { Cloud } from "./cloud";
 export { Schema } from "./schema";
